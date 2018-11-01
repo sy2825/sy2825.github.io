@@ -3,5 +3,9 @@ title: "About me"
 ---
 - __Name:__ Shuo Yan
 - __Ocupation:__ "Student"
-- __Major:__ Biostatistics 
+- __Current Major:__ Biostatistics 
+- __Current Institution:__ Columia University
+- __Email Address:__ [sy2825@cumc.columbia.edu](sy2825@cumc.columbia.edu)
+
+
 
