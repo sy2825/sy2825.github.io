@@ -1,7 +1,14 @@
 ---
-title: "Holy cow!"
+title: "Shuo Yan's personal website"
 ---
 
-### I have a webpage!
+### About this website
 
-And I can put all kinds of stuff on it!
+Hello, my name is Shuo Yan and this is my personal website.
+
+
+### Links
+
+This is the link to my [Resume page](resume.html)
+
+This is the link to my [Github page](https://github.com/sy2825)
