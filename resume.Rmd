@@ -2,9 +2,9 @@
 title: "Resume"
 ---
 
-## Education Background
+### Education Background
 
-### 09/2014 - 05/2018 (Undergraduate)
+#### 09/2014 - 05/2018 (Undergraduate)
 
 * University of Colorado Boulder
 
@@ -12,20 +12,57 @@ title: "Resume"
 
 * Department of Mathematics- Mathematics (Minor)
 
-### 09/2018 - Present (graduate)
+#### 09/2018 - Present (Graduate)
 
 * Columbia University
 
 * Department of Biostatistics - Biostatistics (Major)
 
-## Research & Project
+### Research & Project
 
-### 09/2017-11/2017, 
-
-* Research Assistant 
+#### 09/2017-11/2017 Research Assistant 
 
 * Title: How does Immigration Influence the Real Estate Market? A Study on the Real Estate Markets in China and in the US
 
-### 04/2018 - 05/2018
+* Adviser: Professor Fang Tian
 
-* Analysis of Multicolored Hologram
+* Main Contributions: Collected the resent 7 year’s house prices of 10 cities in china. Discussed the possible influencing factors and determine the research model. Did regression analysis of the data and summarized the factors that affect China’s housing prices.
+
+
+#### 04/2018 - 05/2018 Analysis of Multicolored Hologram
+
+* Made four conclusions and one prediction, successfully built a multicolored hologram system.
+
+### Working Experience 
+
+#### 07/2017-08/2017 Teaching Assistant
+
+* Worked as TA for Professor Helmut Vogel of CMU in GSS (Global Summer School)
+
+*	Taught Physics, Mechanics and Thermodynamics, Electricity and Magnetism three courses at GSS Global Summer School, Beijing, China.
+
+* Inspired physics and mechanics learning passion for the students by organizing various enlightening learning activities, allowing students to explore and discover the challenges and questions, spending time in communicating and sharing the learning track and methods when I was study in USA.
+
+* Host the Opening and Graduation Ceremony of GSS 2017 session.
+
+#### 08/2017 Investment Consultant Assistant Internship
+
+* Trained in industrial Bank CO., LTD. Beijing Branch as an investment consultant assistant intern in private banking department.
+
+* Data collection and analysis for monthly statistic of financial product
+
+* Assisting the private banking investment consultant to maintain and expand private banking clients
+
+* Validated and organized contracts and important documents
+
+*	Analysist the demand and design wealth plans for customers
+
+### Honors & Awards
+
+*	08/2017 Excellent Teaching Assistant honored by GSS International School
+
+*	09/2014 College of Arts and Science’s Dean’s List
+
+*	04/2013 The Personal Special Prize, China National Practical English Competition held by the Youth Channel of CCTV (China Central Television)
+
+*	04/2013 The Group First Prize, China National Practical English Competition held by the Youth Channel of CCTV (China Central Television)
