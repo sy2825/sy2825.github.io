@@ -1,13 +1,22 @@
 ---
-title: "Untitled"
+title: "NY NOAA Data"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
 ---
 
+[Home page](index.html)
+
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(tidyverse)
+
+library(viridis)
+library(p8105.datasets)
+
+library(plotly)
+
 ```
 
 Column {data-width=650}
@@ -16,20 +25,52 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
+ny_noaa_clean = janitor::clean_names(ny_noaa) %>%
+  mutate(
+    year = lubridate::year(date),
+    month = month.name[lubridate::month(date)],
+    day = lubridate::day(date),
+    prcp = as.numeric(prcp)/10,
+    tmax = as.numeric(tmax)/10,
+    tmin = as.numeric(tmin)/10) %>%
+    rename(precipitation_mm = prcp) %>%
+    rename(snow_depth_mm = snwd) %>%
+    rename(snowfall_mm = snow) %>%
+    rename(tmax_c = tmax) %>%
+    rename(tmin_c = tmin) %>%
+  filter(tmax_c > 0)
 
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Box Plot
 
-```{r}
-
+```{r boxplot}
+ny_noaa_clean %>%
+  filter(month == "January") %>%
+  filter(!is.na(tmax_c)) %>%
+  filter(year == 2000:2010) %>%
+  group_by(year = as.character(year) , id) %>%
+  summarize(avg_tmax = mean(tmax_c)) %>%
+  plot_ly(y = ~avg_tmax, color = ~year, type = "box",
+          colors = "Set2") %>%
+  layout(title = 'Average max Temperature in January',
+         xaxis = list(title = 'Year'),
+         yaxis = list(title = 'Average max temperature in degrees C'))
 ```
 
-### Chart C
+### Bar Plot
 
-```{r}
-
+```{r barplot}
+ny_noaa_clean %>%
+  filter(month == "January") %>%
+  filter(snowfall_mm > 0) %>%
+  filter(year == 2000:2010) %>%
+  count(year = as.character(year)) %>% 
+  plot_ly(x = ~year, y = ~n, color = ~year, type = "bar") %>%
+  layout(title = 'Days that snowfall is bigger than 0 in January',
+         xaxis = list(title = 'Year'),
+         yaxis = list(title = 'Days'))
 ```
