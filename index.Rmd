@@ -1,8 +1,22 @@
 ---
 title: "Welcome!"
+output:
+
+  html_document: 
+
+    toc: true
+
+    toc_float: true
 ---
+### Shuo Yan's website
 
 Hello, my name is Shuo Yan, welcome to my personal website!
+
+### Hologram
+
+Enjoy the Hawaii-style hologram!
+
+<center> <img src = "images/hologram.jpg" style = "width:85%"> </center>
 
 
 ### Links
