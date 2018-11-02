@@ -22,9 +22,9 @@ library(plotly)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Scatterplot
 
-```{r}
+```{r scatterplot}
 ny_noaa_clean = janitor::clean_names(ny_noaa) %>%
   mutate(
     year = lubridate::year(date),
@@ -37,8 +37,25 @@ ny_noaa_clean = janitor::clean_names(ny_noaa) %>%
     rename(snow_depth_mm = snwd) %>%
     rename(snowfall_mm = snow) %>%
     rename(tmax_c = tmax) %>%
-    rename(tmin_c = tmin) %>%
-  filter(tmax_c > 0)
+    rename(tmin_c = tmin)
+
+set.seed(1)
+
+ny_noaa_clean %>%
+  filter(!is.na(tmax_c)) %>%
+  filter(!is.na(tmin_c)) %>%
+  filter(!is.na(snowfall_mm)) %>%
+  filter(!is.na(snow_depth_mm)) %>%
+  filter(precipitation_mm > 0) %>%
+  mutate(text_label = str_c("Snowfall(mm): ", snowfall_mm, '\nSnowdepth(mm): ', snow_depth_mm)) %>%
+  sample_n(3000) %>%
+   plot_ly(x = ~tmin_c, y = ~tmax_c, type = "scatter", mode = "markers",
+          alpha = 0.5, 
+          color = ~precipitation_mm,
+          text = ~text_label) %>%
+   layout(title = 'T max vs T min ',
+         xaxis = list(title = 'T min (C)'),
+         yaxis = list(title = 'T max (C)'))
 
 ```
 
